@@ -55,6 +55,8 @@ seeing the value, so we can store the value to keep track of it.
 After the iteration, if there aren't any duplicate, it means all elements 
 are unique, so we can return false. 
 
+## Final Code Implementation
+
 ```
 class Solution {
     func containsDuplicate(_ nums: [Int]) -> Bool {
@@ -77,3 +79,33 @@ class Solution {
 }
 ```
 
+# Second Approach
+While this solution suffice the need for finding whether duplicate exists in a nums array or not, using a hash map can be considered an overkill given the fact that we don't need their actual location, we just need to find if duplicate exists or not. 
+
+Anohter way, which I consider it to be a very simpler yet clever approach, is by using `Set` structure.
+As you may already know, `Set` structure is an "unordered collection of unqiue elements", as per Apple's documentation. 
+
+Why is this helpful?
+
+It means we can simply compare the total count of `Set of nums array` with `nums array`. 
+
+For example, 
+
+If we have nums = [1, 2, 3, 1], `Set` will omit the duplicate value, reducing the count to 3, while nums array has count of 4. 
+Since their count doesn't match to one another, we can safely say that there was a duplicate in nums array. 
+
+```
+class Solution {
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        return Set(nums).count != nums.count
+    }
+}
+```
+
+By this, we are able to determine if we have a duplicate or not. 
+
+## Time Complexity
+Both solutions have O(n) time complexity as it's performing operations for all n numbers in an array.
+
+## Space Complexity
+Both solutions have O(n) space complexity in worst case, as both set and hash map may contain all n distinct elements. 
