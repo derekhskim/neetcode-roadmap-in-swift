@@ -45,3 +45,16 @@ var nums3 = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
 solution.containsDuplicate(nums1) // should return true
 solution.containsDuplicate(nums2) // should return false
 solution.containsDuplicate(nums3) // should return true
+
+// Second solution - simpler version
+class SecondSolution {
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        return Set(nums).count != nums.count
+    }
+}
+
+let secondSolution = SecondSolution()
+
+secondSolution.containsDuplicate(nums1) // should return true
+secondSolution.containsDuplicate(nums2) // should return false
+secondSolution.containsDuplicate(nums3) // should return true
