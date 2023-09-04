@@ -49,6 +49,9 @@ solution.containsDuplicate(nums3) // should return true
 // Second solution - simpler version
 class SecondSolution {
     func containsDuplicate(_ nums: [Int]) -> Bool {
+        /// Set property ignores any duplicate value
+        /// If the total number of count for Set property is different from nums array,
+        /// it means duplicate value was taken out, therefore we can say it contains a duplicate.
         return Set(nums).count != nums.count
     }
 }
