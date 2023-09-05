@@ -67,3 +67,15 @@ let t2 = "stressed"
 solution.isAnagram(s, t) // should return true
 solution.isAnagram(s1, t1) // should return false
 solution.isAnagram(s2, t2) // should return true
+
+class Solution2 {
+    func isAnagram(_ s: String, _ t: String) -> Bool {
+        return s.sorted() == t.sorted()
+    }
+}
+
+let solution2 = Solution()
+
+solution2.isAnagram(s, t) // should return true
+solution2.isAnagram(s1, t1) // should return false
+solution2.isAnagram(s2, t2) // should return true
