@@ -53,3 +53,17 @@ class Solution {
         return countTracker.isEmpty
     }
 }
+
+let solution = Solution()
+let s = "anagram"
+let t = "nagaram"
+
+let s1 = "car"
+let t1 = "rat"
+
+let s2 = "desserts"
+let t2 = "stressed"
+
+solution.isAnagram(s, t) // should return true
+solution.isAnagram(s1, t1) // should return false
+solution.isAnagram(s2, t2) // should return true
