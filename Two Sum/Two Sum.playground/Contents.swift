@@ -20,3 +20,25 @@ import Foundation
 /// Example 3:
 ///     Input: nums = [3, 3], target = 6
 ///     Output: [0, 1]
+
+class Solution {
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        // create empty hash map to store values
+        var emptyHash: [Int:Int] = [:]
+
+        // iterate through array using enumerate() method
+        for (index, value) in nums.enumerated() {
+            // find other value with information we already have
+            let otherValue = target - value
+            // if otherValue exists in emptyHash, it means it's a sum with the value, therefore return index and otherIndex
+            if let otherIndex = emptyHash[otherValue] {
+                return [index, otherIndex]
+            } else {
+                // If it doesn't exist, we set the value to it's index
+                emptyHash[value] = index
+            }
+        }
+
+        return [-1, -1]
+    }
+}
