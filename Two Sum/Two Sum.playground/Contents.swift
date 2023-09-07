@@ -42,3 +42,18 @@ class Solution {
         return [-1, -1]
     }
 }
+
+let solution = Solution()
+
+let nums = [2, 7, 11, 15]
+let target = 9
+
+let nums2 = [3, 2, 4]
+let target2 = 6
+
+let nums3 = [3, 3]
+let target3 = 6
+
+solution.twoSum(nums, target) // should return [0, 1] because nums[0] + nums[1] == 9
+solution.twoSum(nums2, target2) // should return [1, 2]
+solution.twoSum(nums3, target3) // should return [0, 1]
