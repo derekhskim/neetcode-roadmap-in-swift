@@ -46,3 +46,13 @@ class Solution {
         return Array(strHash.values)
     }
 }
+
+let solution = Solution()
+
+let strs = ["eat","tea","tan","ate","nat","bat"]
+let strs1 = [""]
+let strs2 = ["a"]
+
+solution.groupAnagrams(strs)
+solution.groupAnagrams(strs1)
+solution.groupAnagrams(strs2)
