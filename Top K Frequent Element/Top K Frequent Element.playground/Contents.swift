@@ -36,3 +36,14 @@ class Solution {
         return frequentElements
     }
 }
+
+let solution = Solution()
+
+let nums = [1, 1, 1, 2, 2, 3]
+let k = 2
+
+let nums2 = [1]
+let k2 = 1
+
+solution.topKFrequent(nums, k)
+solution.topKFrequent(nums2, k2)
