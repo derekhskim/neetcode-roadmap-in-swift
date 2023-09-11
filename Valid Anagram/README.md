@@ -22,7 +22,7 @@ Output: false
 # Walkthrough
 Immediately if the count of two strings doesn't match, we can safely say it's not a valid anagram.
 
-```
+```Swift
 if s.count != t.count {
   return false
 }
@@ -30,13 +30,13 @@ if s.count != t.count {
 
 Create a hash map, `countTracker`, to keep track of the count
 
-```
+```Swift
 var countTracker: [Character:Int] = [:]
 ```
 
 Iterate through s string first to increase count of each Character in a string.
 
-```
+```Swift
 for char in s {
   if let count = countTracker[char] {
     countTracker[char] = count + 1
@@ -48,7 +48,7 @@ for char in s {
 
 With the information we have, iterate through t string to deduct counting.
 
-```
+```Swift
 for char in t {
   if let count = countTracker[char] {
     if count == 1 {
@@ -64,7 +64,7 @@ for char in t {
 
 Finally, we can return if countTracker is empty or not. If it's empty, it means the strings had identical Characters so it's a valid anagram. 
 
-```
+```Swift
 return countTracker.isEmpty
 ```
 
@@ -72,7 +72,7 @@ return countTracker.isEmpty
 
 Full code implementation would look as follows: 
 
-```
+```Swift
 class Solution {
     func isAnagram(_ s: String, _ t: String) -> Bool {
         // Very first, we can say `s` and `t` are not an anagram if the count doesn't match
@@ -115,7 +115,7 @@ class Solution {
 There is a much simpler way, but it does have pros and cons.
 Let's see the code implementation first: 
 
-```
+```Swift
 class Solution {
   func isAnagram(_ s: String, _ t: String) -> Bool {
     return s.sorted() == t.sorted()
