@@ -31,13 +31,13 @@ Output: [0, 1]
 # Walkthrough
 Create an empty hash map to store values
 
-```
+```Swift
 var emptyHash: [Int:Int] = [:]
 ```
 
 Iterate through array using enumerate() instance method to get key-value pair (index, value) for this case.
 
-```
+```Swift
 for (index, value) in nums.enumerated() {
 
 }
@@ -45,14 +45,14 @@ for (index, value) in nums.enumerated() {
 
 With information that are already available, we can find `otherValue` to find the pair
 
-```
+```Swift
 let otherValue = target - value
 ```
 
 If the `otherValue` already exists in the `emptyHash`, it means that the current `index` and `otherIndex` are indices of two sum. 
 Else, we would create new key (index) - value (value) pair.
 
-```
+```Swift
 if let otherIndex = emptyHash[otherValue] {
   return [index, otherIndex]
 } else {
@@ -62,7 +62,7 @@ if let otherIndex = emptyHash[otherValue] {
 
 Finally, if the pair of indices are not found to become a two sum of a target, we can return [-1, -1] to indicate that no pair was found. 
 
-```
+```Swift
 return [-1, -1]
 ```
 
@@ -70,7 +70,7 @@ return [-1, -1]
 
 Full code implementation would look as follows: 
 
-```
+```Swift
 class Solution {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         // create empty hash map to store values
