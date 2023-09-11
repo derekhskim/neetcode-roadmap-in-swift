@@ -28,14 +28,14 @@ duplicates.
 We have created an `emptyHash` variable which is a dictionary that can 
 take `Integer` for both `Key` and `Value`.
 
-```
+```Swift
 var emptyHash: [Int:Int] = [:]
 ```
 
 By iterating through an array, we are checking if the value of the `nums` 
 array exists in our created `emptyHash` property. 
 
-```
+```Swift
 for (index, value) in nums.enumerated() {
             if let _ = emptyHash[value] {
                 return true
@@ -57,7 +57,7 @@ are unique, so we can return false.
 
 ## Final Code Implementation
 
-```
+```Swift
 class Solution {
     func containsDuplicate(_ nums: [Int]) -> Bool {
         // Using hash map to keep the value with it's new index
@@ -94,7 +94,7 @@ For example,
 If we have nums = [1, 2, 3, 1], `Set` will omit the duplicate value, reducing the count to 3, while nums array has count of 4. 
 Since their count doesn't match to one another, we can safely say that there was a duplicate in nums array. 
 
-```
+```Swift
 class Solution {
     func containsDuplicate(_ nums: [Int]) -> Bool {
         return Set(nums).count != nums.count
