@@ -1,4 +1,5 @@
 # Problem: [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+[Click for Playground](https://github.com/derekhskim/neetcode-roadmap-in-swift/blob/main/Contains%20Duplicate/Contains%20Duplicate.playground/Contents.swift)
 
 Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
