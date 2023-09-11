@@ -1,4 +1,5 @@
 # Problem: [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+[Click for Playground](https://github.com/derekhskim/neetcode-roadmap-in-swift/blob/main/Valid%20Anagram/Valid%20Anagram.playground/Contents.swift)
 
 Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise. 
 
