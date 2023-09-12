@@ -18,6 +18,28 @@ import Foundation
 
 class Solution {
     func productExceptSelf(_ nums: [Int]) -> [Int] {
-        
+        let n = nums.count
+
+        var left = [1]
+        var right = [1]
+        var output: [Int] = []
+
+        // Calculate left prefix product
+        for i in 1..<n {
+            left.append(left[i - 1] * nums[i - 1])
+        }
+
+        // Calculate right suffix product
+        for i in 1..<n {
+            right.append(right[i - 1] * nums[n - i])
+        }
+        right = right.reversed()
+
+        // Multiply left and right arrays to get the result
+        for i in 0..<n {
+            output.append(left[i] * right[i])
+        }
+
+        return output
     }
 }
