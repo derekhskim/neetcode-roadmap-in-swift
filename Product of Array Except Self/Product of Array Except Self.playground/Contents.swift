@@ -43,3 +43,10 @@ class Solution {
         return output
     }
 }
+
+let solution = Solution()
+let nums = [1, 2, 3, 4]
+let nums2 = [-1, 1, 0, -3, 3]
+
+solution.productExceptSelf(nums)
+solution.productExceptSelf(nums2)
