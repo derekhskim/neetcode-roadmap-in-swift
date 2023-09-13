@@ -20,7 +20,7 @@ Output: [1]
 # Initial Approach
 - When I saw the word "frequent", my very first thought was to count each element and store it in a hash map.
 - Once I have the counts for each element, I can sort them in descending order (most counts to least count) and get the keys for k times.
-- 
+
 # Walkthrough
 Initialize a hash map, `emptyHash`, to keep track of the count to it's key.
 
