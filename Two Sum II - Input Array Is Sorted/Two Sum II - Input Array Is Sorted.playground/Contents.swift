@@ -24,3 +24,25 @@ import Foundation
 ///     Input: numbers = [-1,0], target = -1
 ///     Output: [1,2]
 ///     Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
+
+class Solution {
+    func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
+        // Create pointers for left and right
+        var left = 0
+        var right = numbers.count - 1
+
+        while left < right {
+            var sum = numbers[left] + numbers[right]
+            // if the sum equals the target, add 1 to each left and right as it's 1-indexed array
+            if sum == target {
+                return [left + 1, right + 1]
+            } else if sum < target {
+                left += 1
+            } else {
+                right -= 1
+            }
+        }
+
+        return [-1, -1]
+    }
+}
