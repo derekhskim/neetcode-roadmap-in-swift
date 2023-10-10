@@ -45,3 +45,14 @@ class Solution {
         return true
     }
 }
+
+let solution = Solution()
+let s1 = "A man, a plan, a canal: Panama"
+
+let s2 = "race a car"
+
+let s3 = " "
+
+solution.isPalindrome(s1)
+solution.isPalindrome(s2)
+solution.isPalindrome(s3)
