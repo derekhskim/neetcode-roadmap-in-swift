@@ -21,3 +21,27 @@ import Foundation
 ///     Output: true
 ///     Explanation: s is an empty string "" after removing non-alphanumeric characters.
 ///     Since an empty string reads the same forward and backward, it is a palindrome.
+
+class Solution {
+    func isPalindrome(_ s: String) -> Bool {
+        // Filter the string with only letters and/or numbers, and store them in an array to get access of their indices
+        let cleanedStringArray = s.lowercased().filter { $0.isLetter || $0.isNumber }.compactMap { $0 }
+
+        // Initialize two pointers
+        var left = 0
+        var right = cleanedStringArray.count - 1
+
+        // Iterate through the array, until it is either found non-palindrome, or if it equals each other, continue
+        while left < right {
+            if cleanedStringArray[left] == cleanedStringArray[right] {
+                left += 1
+                right -= 1
+                continue
+            } else {
+                return false
+            }
+        }
+
+        return true
+    }
+}
